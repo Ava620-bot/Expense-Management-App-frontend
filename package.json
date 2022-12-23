@@ -1,5 +1,5 @@
 {
-  "proxy": "https://expense-management-app-07go.onrender.com/login",
+  "proxy": "https://expense-management-app-api.onrender.com",
   "name": "client",
   "version": "0.1.0",
   "private": true,
