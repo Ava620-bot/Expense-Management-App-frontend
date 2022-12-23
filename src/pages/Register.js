@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import {Form, Input, message} from 'antd'
 import { Link, useNavigate } from 'react-router-dom'
-import  axios  from 'axios'
+import axios from '../axios';
+
 import { useState } from 'react'
 import Spinner from '../components/Spinner'
 
@@ -18,7 +19,7 @@ const Register = () => {
     const submitHandler = async(values)=>{
         try {
           setLoading(true);
-          await axios.post('/api/v1/users/register', values)
+          await axios.post('/users/register', values)
           message.success('Registration Successful')
           setLoading(false);
           navigate('/login')

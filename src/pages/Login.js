@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import {Form,Input, message} from 'antd'
 import { Link, useNavigate } from 'react-router-dom'
-import axios from 'axios'
+import axios from '../axios';
+
 import { useState } from 'react'
 import Spinner from '../components/Spinner'
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
@@ -18,7 +19,7 @@ const Login = () => {
      const submitHandler = async(values)=>{
         try {
           setLoading(true)
-          const {data} = await axios.post('/api/v1/users/login', values)
+          const {data} = await axios.post('/users/login', values)
           message.success('User login successfully')
           setLoading(false)
 
